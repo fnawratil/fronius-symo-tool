@@ -1,0 +1,11 @@
+{
+  "Influx": {
+    "Url": "",
+    "Token": "",
+    "Org": "",
+    "Bucket": ""
+  },
+  "Fronius": {
+    "Host": ""
+  }
+}

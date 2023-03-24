@@ -1,0 +1,11 @@
+{
+  "Influx": {
+    "Url": "INFLUX_URL",
+    "Token": "INFLUX_TOKEN",
+    "Org": "INFLUX_ORG",
+    "Bucket": "INFLUX_BUCKET"
+  },
+  "Fronius": {
+    "Host": "FRONIUS_HOST"
+  }
+}
