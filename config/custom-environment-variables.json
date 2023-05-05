@@ -7,5 +7,6 @@
   },
   "Fronius": {
     "Host": "FRONIUS_HOST"
-  }
+  },
+  "UpdateInterval": "UPDATEINTERVAL"
 }

@@ -10,6 +10,7 @@ const INFLUX_BUCKET = config.get('Influx.Bucket');
 const writeApi = new influx.InfluxDB({url: INFLUX_URL, token: INFLUX_TOKEN}).getWriteApi(INFLUX_ORG, INFLUX_BUCKET, 'ms')
 
 const FRONIUS_HOST = config.get('Fronius.Host');
+const UPDATEINTERVAL = config.get('UpdateInterval');
 
 console.log(`Fetching data from ${FRONIUS_HOST} to ${INFLUX_URL} (${INFLUX_ORG}/${INFLUX_BUCKET}) -> ${INFLUX_TOKEN}`);
 
@@ -78,6 +79,6 @@ setInterval(async () => {
     try {
         await pushData();
     } catch(ex) {
-        console.error(ex);
+        console.error(ex.message);
     }
-}, 30 * 1000);
+}, UPDATEINTERVAL * 1000);
